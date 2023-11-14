@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt.br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animais</title>
+    <!DOCTYPE html>
+<html lang="pt.br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adota Pet</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif; 
+            font-size: 14px; 
+            color: black; 
+            margin: 0; 
+            padding: 0; 
+            background-image: url('img/imagemdefundo.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: black; 
+            font-size: 20px; 
+        }
+
+        .centered-text {
+            text-align: center;
+        }
+
+        section figure {
+            display: inline-block; 
+            margin: 10px; 
+        }
+
+        ul.vertical {
+            color: black; 
+            font-weight: bold;
+            list-style-type: none; 
+        }
+
+        ul.horizontal {
+            list-style-type: none; 
+            display: flex; 
+            padding: 0; 
+        }
+
+        li {
+            margin-right: 130px; 
+            margin-bottom: 10px; 
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        nav {
+            background-color: orange;
+            overflow: hidden;
+            text-align: center; 
+        }
+
+        nav a {
+            display: inline-block; 
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: orange;
+            color: orangered;
+        }
+
+        header {
+            position: relative;
+        }
+
+        header img {
+            width: auto;
+            height: auto;
+            max-width: auto;
+            display: block;
+        }
+
+        header h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .main-box {
+            background-color: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 100px auto; 
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="form.html">Formulários</a>
+        <a href="animais.html">Animais para adoção</a>
+        <a href="about.html">Sobre</a>
+    </nav>
+    <main>
+        <section class="main-box">
+        <h1 class="centered-text">Adote o seu futuro melhor amigo e transforme a vida de um animal para sempre</h1>
+        </section>
+        <section class="text-justify">
+            <h1 class="centered-text">Cães</h1>
+            <ul class="list-horizontal">
+                <li class="list-item">
+                    <figure class="figure-block">
+                        <img src="img/bob.jpg" alt="Pet 1" width="250">
+                        <figcaption class="figcaption-center">Bob</figcaption>
+                    </figure>
+                    <figure class="figure-block">
+                        <img src="img/maia.jpg" alt="Pet 2" width="250">
+                        <figcaption class="figcaption-center">Maia</figcaption>
+                    </figure>
+                    <figure class="figure-block">
+                        <img src="img/jackey.jpg" alt="Pet 3" width="250">
+                        <figcaption class="figcaption-center">Jackey</figcaption>
+                    </figure>
+                    <figure class="figure-block">
+                        <img src="img/marley.jpg" alt="Pet 4" width="250">
+                        <figcaption class="figcaption-center">Marley</figcaption>
+                    </figure> <figure class="figure-block">
+                        <img src="img/fred.jpg" alt="Pet 5" width="250">
+                        <figcaption class="figcaption-center">Fred</figcaption>
+                    </figure>
+                    <figure class="figure-block">
+                        <img src="img/scobby.jpg" alt="Pet 6" width="250">
+                        <figcaption class="figcaption-center">Scobby</figcaption>
+                    </figure> <figure class="figure-block">
+                        <img src="img/cacau.jpg" alt="Pet 7" width="250">
+                        <figcaption class="figcaption-center">Cacau</figcaption>
+                    </figure>
+                    <figure class="figure-block">
+                        <img src="img/luke.jpg" alt="Pet 8" width="250">
+                        <figcaption class="figcaption-center">Luke</figcaption>
+                    </figure>
+                    <figure class="figure-block">
+                        <img src="img/polaco.jpg" alt="Pet 9" width="250">
+                        <figcaption class="figcaption-center">Polaco</figcaption>
+                    </figure>
+                    <figure class="figure-block">
+                        <img src="img/olavo.jpg" alt="Pet 10" width="250">
+                        <figcaption class="figcaption-center">Olavo</figcaption>  
+                </li>
+            </ul>
+        </section>
+
+        <section class="text-justify">
+            <h1 class="centered-text">Gatos</h1>
+            <ul class="list-horizontal">
+                <li class="list-item">
+                    <figure class="figure-block" onclick="showPopup('Garfild', '', 'img/garfild.jpg')">
+                    <img src="img/garfild.jpg" alt="Pet 11" width="250">
+                    <figcaption class="figcaption-center">Garfild</figcaption>
+                </figure>
+                <figure class="figure-block">
+                    <img src="img/menina.jpg" alt="Pet 12" width="250">
+                    <figcaption class="figcaption-center">Menina</figcaption>
+                </figure>
+                <figure class="figure-block">
+                    <img src="img/garota.jpg" alt="Pet 13" width="250">
+                    <figcaption class="figcaption-center">Garota</figcaption>
+                </figure>
+                <figure class="figure-block">
+                    <img src="img/mingau.jpg" alt="Pet 14" width="250">
+                    <figcaption class="figcaption-center">Mingau</figcaption>
+                </figure>
+                <figure class="figure-block">
+                    <img src="img/stuart.jpg" alt="Pet 15" width="250">
+                    <figcaption class="figcaption-center">Stuart</figcaption>
+                </figure>
+                <figure class="figure-block">
+                    <img src="img/frajola.jpg" alt="Pet 16" width="250">
+                    <figcaption class="figcaption-center">Frajola</figcaption>
+                </figure>
+                <figure class="figure-block">
+                    <img src="img/yuri.jpg" alt="Pet 17" width="250">
+                    <figcaption class="figcaption-center">Yuri</figcaption>
+                </figure>
+                <figure class="figure-block">
+                    <img src="img/frederico.jpg" alt="Pet 18" width="250">
+                    <figcaption class="figcaption-center">Frederico</figcaption>
+                </figure>
+                <figure class="figure-block">
+                    <img src="img/melissa.jpg" alt="Pet 19" width="250">
+                    <figcaption class="figcaption-center">Melissa</figcaption>
+                </figure>
+                <figure class="figure-block">
+                    <img src="img/jubileu.jpg" alt="Pet 20" width="250">
+                    <figcaption class="figcaption-center">Jubileu</figcaption>
+                </figure>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

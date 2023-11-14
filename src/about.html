@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt.br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif; /* Fonte Times New Roman */
+            font-size: 20px; /* Tamanho 20 para texto */
+            color: black; /* Texto preto */
+            margin: 0; /* Remove a margem padrão do corpo */
+            padding: 0; /* Remove o preenchimento padrão do corpo */
+            background-image: url('img/imagemdefundo.jpg'); /* Substitua pelo caminho da sua imagem de fundo */
+            background-size: cover; /* Cobrir toda a área do corpo com a imagem */
+            background-position: center; /* Centralizar a imagem */
+            background-repeat: no-repeat; /* Evitar a repetição da imagem */
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: black; /* Títulos pretos */
+            font-size: 20px; /* Tamanho 20 para títulos */
+        }
+
+        .centered-text {
+            text-align: center;
+        }
+
+        section figure {
+            display: inline-block; /* Exibe as figuras lado a lado */
+            margin: 10px; /* Adiciona um espaçamento entre as figuras */
+        }
+
+        ul.vertical {
+            color: black; /* Texto preto */;
+            font-weight: bold;
+            list-style-type: none; /* Remove marcadores da lista */
+        }
+
+        ul.horizontal {
+            list-style-type: none; /* Remove marcadores da lista */
+            display: flex; /* Exibe os itens da lista em linha */
+            padding: 0; /* Remove o preenchimento padrão da lista */
+        }
+
+        li {
+            margin-right: 130px; /* Adiciona espaçamento entre os itens da lista horizontal */
+            margin-bottom: 10px; /* Adiciona espaçamento entre os itens da lista vertical */
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        nav {
+            background-color: orange;
+            overflow: hidden;
+            text-align: center; /* Centralizar o menu horizontalmente */
+        }
+
+        nav a {
+            display: inline-block; /* Torna os itens do menu em linha */
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: orange;
+            color: orangered;
+        }
+
+        header {
+            position: relative;
+        }
+
+        header img {
+            width: auto;
+            height: auto;
+            max-width: auto;
+            display: block;
+
+        }
+
+        header h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+        .main-box {
+            background-color: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 100px auto; /* Centering the box horizontally */
+            max-width: 800px;
+            text-align: center;
+        }
+        .justificado {
+            text-align: justify; 
+        }
+        .main-box h1 {
+            font-size: 30px; /* Ajusta o tamanho da fonte do h1 */
+            text-align: center; /* Centraliza o h1 horizontalmente */
+        }
+        .assinatura {
+            font-style: italic;
+            text-align: right;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="form.html">Formulários</a>
+        <a href="animais.html">Animais para adoção</a>
+        <a href="about.html">Sobre</a>
+    </nav>
+    </header>
+    <main>
+        <section class="main-box justificado">
+            <h1>Nossa História</h1>
+            <p> Em 2023 nasceu o "ADOTA PET", um projeto inovador concebido por Krisnanda, uma dedicada defensora dos direitos dos animais. Movida por sua paixão e determinação em causar um impacto positivo, a mesma criou este projeto com o claro propósito de revolucionar o processo de adoção de animais em ONGs e abrigos.</p>
+            <p> Acreditando que cada animal merece um lar amoroso, ela empenhou-se em criar uma solução que facilitasse esse encontro. Ao observar os desafios enfrentados por ONGs e abrigos na administração dos processos de adoção, enxergou o "ADOTA PET" como uma resposta eficaz, combinando tecnologia, compaixão e eficiência.</p>
+            <p> A nossa missão é simplificar o caminho para a adoção responsável, conectando de maneira inteligente aqueles que desejam adotar a futuros companheiros de quatro patas ansiosos por um lar. A plataforma emerge como um farol de esperança para animais em busca de uma segunda chance e para almas generosas que desejam oferecer amor e cuidado.</p>
+            <p> Hoje, construímos uma ponte para um futuro em que cada animal encontre um lar repleto de amor, e cada lar descubra a alegria inestimável de uma nova amizade. Junte-se a essa jornada de esperança, compaixão e transformação.</p>
+            <p class="assinatura">Equipe ADOTA PET - onde vidas mudam, laços se formam e corações encontram seu verdadeiro propósito.</p>
+        </section>
+        <section>
+            <section class="main-box">
+                <img src="img/fundadora.jpg" alt="fundadora" style="width: 100%; max-width: 500px; height: auto;">
+                <figcaption>Krisnanda Nunes</figcaption>
+            </section>
+            <section class="main-box">
+                <h2>Dados do Criador</h2>
+            <p>Nome: Krisnanda Thais dos Santos Nunes</p>
+            <p>Disciplina: Fundamentos de Programação Web</p>
+            <p>Turma: 11100010553_20232_01</p>
+        </section>
+    </main>
+</body>
+</html>

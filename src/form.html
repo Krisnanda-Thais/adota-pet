@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('img/imagemdefundo.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat; 
+        }
+        nav {
+            background-color: orange;
+            overflow: hidden;
+            text-align: center; /* Centralizar o menu horizontalmente */
+        }
+
+        nav a {
+            display: inline-block; /* Torna os itens do menu em linha */
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            background-color: orange;
+            color: orangered;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            /* width: 80%; */
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 45%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: red;
+            color: white;
+            cursor: pointer;
+        }
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            margin-right: 5px;
+        }
+    
+        .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        z-index: 1; 
+         }
+
+        .popup {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 70%;
+        z-index: 2; 
+        position: relative;
+        }
+
+        .close-btn {
+            cursor: pointer;
+            color: #555;
+            font-weight: bold;
+            float: right;
+        }
+        .main-box {
+            background-color: white;
+            padding: 50px;  
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px; 
+            max-width: 800px;
+        }
+        .container {
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        /* height: 100vh; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="form.html">Formulários</a>
+        <a href="animais.html">Animais para adoção</a>
+        <a href="about.html">Sobre</a>
+    </nav>
+    </div>
+    </body>
+    <main>
+        <section class="main-box">
+            <h2>Cadastro do Adotante</h2>
+            <form onsubmit="return validateAdotanteForm()">
+
+                <label for="nomeAdotante">Nome:</label>
+                <input type="text" id="nomeAdotante" name="nomeAdotante" required>
+
+                <label for="dataNascimento">Data de nascimento:</label>
+                <input type="date" id="dataNascimento" name="dataNascimento" required>
+
+                <label for="emailAdotante">E-mail:</label>
+                <input type="email" id="emailAdotante" name="emailAdotante" required>
+
+                <label for="cidadeAdotante">Cidade:</label>
+                <input type="text" id="cidadeAdotante" name="cidadeAdotante" required>
+
+                <label for="estadoAdotante">Estado:</label>
+                <input type="text" id="estadoAdotante" name="estadoAdotante" required>
+                
+                <input type="checkbox" id="aceitarAdotante" name="aceitarAdotante" required>
+                <label for="aceitarAdotante">Aceito os termos e condições</label>
+                
+
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+
+        <section class="main-box">
+            <h2>Cadastro da Instituição</h2>
+            <form onsubmit="return validateInstituicaoForm()">
+
+                <label for="nomeInstituicao">Nome:</label>
+                <input type="text" id="nomeInstituicao" name="nomeInstituicao" required>
+
+                <label for="cnpj">CNPJ:</label>
+                <input type="text" id="cnpj" name="cnpj" required>
+
+                <label for="emailInstituicao">E-mail:</label>
+                <input type="email" id="emailInstituicao" name="emailInstituicao" required>
+
+                <label for="cidadeInstituicao">Cidade:</label>
+                <input type="text" id="cidadeInstituicao" name="cidadeInstituicao" required>
+
+                <label for="estadoInstituicao">Estado:</label>
+                <input type="text" id="estadoInstituicao" name="estadoInstituicao" required>
+
+                <input type="checkbox" id="aceitarInstituicao" name="aceitarInstituicao" required>
+                <label for="aceitarInstituicao">Aceito os termos e condições</label>
+                
+
+                <input type="submit" value="Enviar">
+                
+            </form>
+        </section>
+    </main>
+
+    <div class="overlay" id="popupAdotante">
+        <div class="popup">
+            <span class="close-btn" onclick="closePopup('popupAdotante')">X</span>
+            <h2>Termos e Condições para Cadastro de Adotantes</h2>
+            <p>Bem-vindo ao ADOTA Pet!</p>
+            <p> Antes de prosseguir com o cadastro, é importante que você leia e compreenda nossos Termos e Condições. Ao se cadastrar como adotante, você concorda com os seguintes termos:</p>
+                <ul class="vertical">
+                <li>1. Responsabilidade Legal:
+                - Você declara ser legalmente capaz de adotar um animal de estimação.
+                - Compromete-se a seguir todas as leis e regulamentos locais relacionados à posse responsável de animais.
+                </li>
+                <li>2. Informações Pessoais:
+                - Ao se cadastrar, você concorda em fornecer informações verdadeiras, precisas e atualizadas sobre você.
+                - Concorda em manter suas informações de contato e perfil atualizadas.
+                </li>
+                <li>3. Compromisso de Cuidado:
+                - Compromete-se a oferecer um ambiente seguro, amoroso e adequado ao animal adotado.
+                - Entende e aceita as responsabilidades associadas à adoção, incluindo cuidados veterinários, alimentação e bem-estar geral.
+                </li>
+                <li>4. Processo de Adoção:
+                - Reconhece que o processo de adoção pode incluir uma entrevista e/ou visita ao local de residência.
+                - Compreende que a ONG ou abrigo tem o direito de recusar a adoção se considerar que não atende aos critérios estabelecidos.
+                </li>
+                <li>5. Taxas de Adoção e Doações:
+                - Compromete-se a pagar quaisquer taxas de adoção estabelecidas pela ONG ou abrigo, como ressarcimento de vacinas aplicadas no pet.
+                - Tem a opção de fazer doações voluntárias para apoiar a causa animal.
+                </li>
+                <li>6. Acompanhamento Pós-Adoção:
+                - Concorda em permitir possíveis visitas de acompanhamento após a adoção para garantir o bem-estar contínuo do animal.
+                - Compromete-se a informar a ONG ou abrigo sobre quaisquer mudanças significativas em sua situação que possam afetar o animal.
+                </li>
+                <li>7. Desistência da Adoção:
+                - Se, por algum motivo, não puder mais cuidar do animal adotado, concorda em devolvê-lo à ONG ou abrigo.
+                </li>
+                <li>8. Condições de Saúde:
+                - Reconhece que os animais adotados podem ter históricos médicos específicos e compromete-se a lidar com quaisquer condições de saúde conhecidas.
+                </li>
+                <li>9. Comunicação:
+                - Aceita receber comunicações do ADOTA Pet relacionadas à adoção, eventos e atualizações.
+                </li>
+            <p>Ao clicar em "Aceitar" durante o processo de cadastro, você confirma que leu, compreendeu e concorda com estes termos e condições.</p>
+            </p>
+        </div>
+    </div>
+
+    <div class="overlay" id="popupInstituicao">
+        <div class="popup">
+            <span class="close-btn" onclick="closePopup('popupInstituicao')">X</span>
+            <h2>Termos e Condições para Cadastro de Instituições</h2>
+            <p>Bem-vindo ao ADOTA Pet!</p>
+            <p> Antes de prosseguir com o cadastro da sua instituição, é importante que você leia e compreenda nossos Termos e Condições. Ao se cadastrar como uma ONG no ADOTA Pet, você concorda com os seguintes termos:</p>
+                <ul class="vertical">
+                <li>1.  Elegibilidade:
+                   - Sua instituição declara ser uma organização não governamental ou abrigo legalmente registrados e em conformidade com as leis locais.
+                   - Você compromete-se a fornecer informações precisas e atualizadas sobre sua instituição.
+                </li>
+                <li>2.  Responsabilidades e Condições dos Animais:
+                   - Compromete-se a garantir o bem-estar físico e emocional dos animais sob seus cuidados.
+                   - Entende que é sua responsabilidade fornecer informações detalhadas sobre cada animal, incluindo histórico médico, temperamento e requisitos específicos.
+                </li>
+                <li>3. Processo de Adoção:
+                   - Reconhece que o processo de adoção pode incluir avaliação de candidatos, entrevistas e/ou visitas ao local de adoção.
+                   - Tem o direito de recusar adoções se considerar que não atendem aos critérios estabelecidos.
+                </li>
+                <li>4. Taxas de Adoção e Doações:
+                   - Compromete-se a definir taxas de adoção razoáveis, se aplicável.
+                   - Pode aceitar doações voluntárias para apoiar sua instituição e a causa do ADOTA Pet.
+                </li>
+                <li>5. Atualização de Informações:
+                   - Concorda em manter as informações da sua instituição atualizadas, incluindo dados de contato e informações sobre animais disponíveis.
+                </li>
+                <li>6. Colaboração com ADOTA Pet:
+                   - Autoriza o ADOTA Pet a exibir as informações da sua instituição e dos animais em sua plataforma.
+                   - Aceita colaborar com possíveis visitas de acompanhamento após a adoção para garantir o bem-estar contínuo dos animais.
+                </li>
+                <li>7. Comunicação:
+                   - Aceita receber comunicações do ADOTA Pet relacionadas à parceria, eventos e atualizações.
+                </li>
+                <li>8. Compromisso Ético:
+                   - Compromete-se a conduzir suas atividades com ética e transparência, visando sempre o melhor interesse dos animais.
+                </li>
+                <li>9. Condições de Saúde:
+                   - Reconhece a importância de fornecer informações precisas sobre a saúde dos animais e compromete-se a lidar com quaisquer condições de saúde conhecidas.
+                </li>
+                <li>10. Aceitação dos Termos:
+                    - Ao clicar em "Aceitar" durante o processo de cadastro, sua instituição confirma que leu, compreendeu e concorda com estes Termos e Condições.
+                </li>
+                <p>O ADOTA Pet reserva-se o direito de alterar ou atualizar estes Termos e Condições. Recomendamos revisar regularmente para estar ciente de quaisquer alterações.</p>
+                <p>Obrigado por fazer a diferença na vida dos animais!</p>
+        </div>
+    </div>
+
+    <script>
+
+        function showPopup(popupId) {
+            document.getElementById(popupId).style.display = 'flex';
+        }
+
+        function closePopup(popupId) {
+            document.getElementById(popupId).style.display = 'none';
+        }
+
+        document.getElementById('aceitarAdotante').addEventListener('change', function () {
+            if (this.checked) {
+                showPopup('popupAdotante');
+            }
+        });
+
+        document.getElementById('aceitarInstituicao').addEventListener('change', function () {
+            if (this.checked) {
+                showPopup('popupInstituicao');
+            }
+        });
+    </script>
+</body>
+</html>
